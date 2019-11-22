@@ -1,0 +1,8 @@
+{
+  "name": "react-and-rails",
+  "scripts": {
+    "build": "cd front && npm install && npm run build && cd ..",
+    "deploy": "cp -a front/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+  }
+}
