@@ -1,16 +1,13 @@
-class Api::V1::ProjectsController < ApplicationController
+class Api::V1::ProjectsController < Api::V1::BaseController
   before_action :set_project, only: [:show, :update, :destroy]
 
   # GET /projects
   def index
     @projects = Project.all
-
-    render json: @projects
   end
 
   # GET /projects/1
   def show
-    render json: @project
   end
 
   # POST /projects

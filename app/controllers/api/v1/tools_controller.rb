@@ -1,4 +1,4 @@
-class Api::V1::ToolsController < ApplicationController
+class Api::V1::ToolsController < Api::V1::BaseController
   before_action :set_tool, only: [:show, :update, :destroy]
 
   # GET /tools
